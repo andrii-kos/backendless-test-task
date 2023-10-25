@@ -1,0 +1,29 @@
+body {
+  margin: 0 1em;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+ul li a{
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+ul li a:hover{
+  background-color: green;
+  color: #fff;
+}
+
+.active{
+  background-color: green;
+  color: #fff;
+}
