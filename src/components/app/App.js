@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import DynamicComponent from '../dynamicComponent/DynamicComponen';
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import useHttp from '../../hooks/useHttp';
 import {  Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
@@ -52,7 +52,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <header>
           <h1><NavLink to='/'>Test App</NavLink></h1>
@@ -65,7 +65,7 @@ function App() {
         </Routes>
         )}
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
