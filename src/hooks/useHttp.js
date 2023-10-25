@@ -3,7 +3,10 @@ const useHttp = () => {
     url, 
     method = "GET", 
     body = null, 
-    headers = {}) => {
+    headers =  {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+   }) => {
       try {
         const response = await fetch(url, {method, body, headers});
         const data = await response.json();

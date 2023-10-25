@@ -8,9 +8,10 @@ import './App.css';
 function App() {
   const { request } = useHttp();
   const [ tabs, setTabs ] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
-      const response = await request('./tabs.json');
+      const response = await request('/tabs.json');
       setTabs(response.sort((a, b) => a.order - b.order))
     };
     fetchData()
@@ -54,7 +55,7 @@ function App() {
     <BrowserRouter>
       <div>
         <header>
-          <h1>Test App</h1>
+          <h1><NavLink to='/'>Test App</NavLink></h1>
           {renderNaw()}
         </header>
         {tabs.length > 0 && (
