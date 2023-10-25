@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await request('./tabs.json');
+      const response = await request('tabs.json');
       setTabs(response.sort((a, b) => a.order - b.order))
     };
     fetchData()
